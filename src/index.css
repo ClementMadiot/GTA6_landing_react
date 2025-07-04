@@ -133,7 +133,7 @@ main {
     }
 
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      @apply text-white lg:text-[26px] lg:leading-[34px] md:text-2xl text-lg md:pe-28 pe-14;
     }
 
     .jason-1 {
