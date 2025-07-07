@@ -37,7 +37,7 @@ const FirstVideo = () => {
         preload="auto"
         src="./videos/output1.mp4"
         className="first-vd"
-        ></video>
+        />
       </div>
     </section>
   )

@@ -177,7 +177,7 @@ main {
     }
 
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      @apply text-white md:text-2xl text-lg md:pe-28 pe-14  ; /*! pe-14 */
     }
 
     p:last-of-type {

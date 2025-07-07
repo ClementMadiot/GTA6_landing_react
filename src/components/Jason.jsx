@@ -36,11 +36,6 @@ const Jason = () => {
       opacity: 1, y: 0, duration: 1, ease: "power1.inOut"
     }, '<')
 
-
-    
-    // .to('.jason-3', {opacity: 0, duration: 1, ease: "power1.inOut"} )
-
-
   })
   return (
     <section className="jason">
