@@ -18,8 +18,7 @@ const SecondVideo = () => {
       },
     });
 
-    tl.to(".lucia",{ opacity: 1, duration: 1, ease: "power1.inOut" }
-    );
+    tl.to(".lucia",{ opacity: 1, duration: 1, ease: "power1.inOut" });
 
     videoRef.current.onloadedmetadata = () => {
       tl.to(
@@ -42,7 +41,7 @@ const SecondVideo = () => {
           playsInline
           preload="auto"
           src="./videos/output2.mp4"
-          className="first-vd"
+          className="size-full object-cover second-vd [object-position:15%_0%]"
         />
       </div>
     </section>
