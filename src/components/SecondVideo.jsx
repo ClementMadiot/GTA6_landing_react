@@ -17,7 +17,7 @@ const SecondVideo = () => {
         pin: true,
       },
     });
-
+    
     tl.to(".lucia",{ opacity: 1, duration: 1, ease: "power1.inOut" });
 
     videoRef.current.onloadedmetadata = () => {

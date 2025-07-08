@@ -13,8 +13,10 @@ const Jason = () => {
         scrub: 2, // smooth delay animation
       }
     })
+    // Fade out first video
     .to('.first-vd', {opacity: 0, duration: 1, ease: "power1.inOut"})
 
+    // slide up the images
     gsap.to('.jason .img-box', {
       scrollTrigger:{
         trigger: ".jason",
