@@ -72,7 +72,7 @@ main {
   }
 
   .gradient-title {
-    @apply md:text-[8rem] text-[5rem] font-round-bold !font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-transparent;
   }
 
   .hero-section {
@@ -99,7 +99,7 @@ main {
     }
 
     .overlay-logo {
-      @apply size-full object-cover opacity-0 w-60 md:w-60 2xl:w-72 3xl:w-80;
+      @apply size-full object-cover opacity-0 w-[124px] md:w-[172px] lg:w-[229px] 2xl:w-72 3xl:w-80;
     }
   }
 
@@ -113,11 +113,11 @@ main {
     @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100;
 
     .entrance-logo {
-      @apply 2xl:w-72 3xl:w-80 md:w-60 w-48 absolute xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44 3xl:top-48 left-1/2 -translate-x-1/2;
+      @apply 2xl:w-72 3xl:w-80 lg:w-[229px] md:w-[172px] w-[124px] absolute xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44 3xl:top-48 left-1/2 -translate-x-1/2;
     }
 
     .text-wrapper {
-      @apply mt-40 md:mt-60 2xl:mt-44 3xl:top-48;
+      @apply mt-30 md:mt-40 2xl:mt-44 3xl:top-48;
     }
   }
 
@@ -177,7 +177,8 @@ main {
     }
 
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14  ; /*! pe-14 */
+      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      /*! pe-14 */
     }
 
     p:last-of-type {
@@ -210,7 +211,7 @@ main {
   }
 
   .post-card {
-    @apply relative flex justify-center items-center pb-80 shadow-2xl;
+    @apply relative flex justify-center items-center pb-80 lg:pb-64 shadow-2xl;
 
     .animated-gradient-bg {
       @apply absolute w-full md:h-[200vh] h-[220vh] left-0 xl:-bottom-1/2 md:-bottom-5/6;
@@ -250,7 +251,8 @@ main {
   background: var(--color-black-gradient)
 }
 
-.entrance-message {
+.entrance-message,
+.entrance-intro {
   mask-image: radial-gradient(circle at 50% 100vh, black 0%, transparent 0%);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;

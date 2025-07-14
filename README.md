@@ -25,13 +25,13 @@
 ## <br /> <a name="tech-stack">🛠 Technology Used</a>
 
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
-Tailwind CSS is a valuable tool for developers who want to build modern, responsive, and visually appealing websites without sacrificing development speed.
+  Tailwind CSS is a valuable tool for developers who want to build modern, responsive, and visually appealing websites without sacrificing development speed.
 
 - [GSAP](https://greensock.com/gsap/)
-GSAP (GreenSock Animation Platform) is a powerful JavaScript library for creating high-performance animations
+  GSAP (GreenSock Animation Platform) is a powerful JavaScript library for creating high-performance animations
 
 - [react-responsive](https://www.npmjs.com/package/react-responsive)
-react-responsive is a library that allows you to create responsive components in React applications, enabling you to render different components or styles based on the device's screen size or orientation.
+  react-responsive is a library that allows you to create responsive components in React applications, enabling you to render different components or styles based on the device's screen size or orientation.
 
 ## <br /> <a name="launch-app">🚀 Launch App</a>
 
@@ -39,12 +39,12 @@ Follow these steps to set up the project locally on your machine.
 
 **Prerequisites**
 
->[!NOTE]
+> [!NOTE]
 > Make sure you have the following installed on your machine:
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) *(Node Package Manager)*
+- [npm](https://www.npmjs.com/) _(Node Package Manager)_
 
 **Cloning the Repository**
 
@@ -81,17 +81,17 @@ Global styling are defined using **CSS** & **TailwindCSS**
 
 @font-face {
   font-family: "Long";
-  src: url("/fonts/long.woff")
+  src: url("/fonts/long.woff");
 }
 
 @font-face {
   font-family: "Round";
-  src: url("/fonts/round.woff")
+  src: url("/fonts/round.woff");
 }
 
 @font-face {
   font-family: "Round Bold";
-  src: url("/fonts/round-bold.woff")
+  src: url("/fonts/round-bold.woff");
 }
 
 @theme {
@@ -132,15 +132,15 @@ main {
 
 @layer components {
   main {
-    @apply w-dvw overflow-x-hidden
+    @apply w-dvw overflow-x-hidden;
   }
 
   nav {
-    @apply fixed top-0 left-0 w-full flex justify-between items-center md:p-16 p-5 z-[100]
+    @apply fixed top-0 left-0 w-full flex justify-between items-center md:p-16 p-5 z-[100];
   }
 
   gradient-title {
-    @apply text-[5rem] md:text-[8rem] font-round-bold font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 bg-clip-text text-transparent
+    @apply text-[5rem] md:text-[8rem] font-round-bold font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 bg-clip-text text-transparent;
   }
 
   .hero-section {
@@ -316,14 +316,16 @@ main {
 
 @layer utilities {
   .black-gradient-bg {
-    background: linear-gradient(223.17deg,
-        rgb(28, 24, 41) 0%,
-        rgb(27, 24, 40) 8.61%,
-        rgb(25, 23, 36) 17.21%,
-        rgb(22, 21, 32) 25.82%,
-        rgb(20, 19, 28) 34.42%,
-        rgb(18, 18, 24) 43.03%,
-        rgb(17, 17, 23) 51.63%);
+    background: linear-gradient(
+      223.17deg,
+      rgb(28, 24, 41) 0%,
+      rgb(27, 24, 40) 8.61%,
+      rgb(25, 23, 36) 17.21%,
+      rgb(22, 21, 32) 25.82%,
+      rgb(20, 19, 28) 34.42%,
+      rgb(18, 18, 24) 43.03%,
+      rgb(17, 17, 23) 51.63%
+    );
   }
 
   .entrance-message {

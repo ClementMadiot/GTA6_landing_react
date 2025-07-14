@@ -6,8 +6,7 @@ import { useMaskSettings } from "../constants";
 import ComingSoon from "./ComingSoon";
 
 const Hero = () => {
-  const { initialMaskPos, initialMaskSize, maskPos, maskSize } =
-    useMaskSettings();
+  const { initialMaskPos, initialMaskSize, maskSize } = useMaskSettings();
 
   useGSAP(() => {
     gsap.set(".mask-wrapper", {
@@ -33,10 +32,12 @@ const Hero = () => {
       .to(".scale-out", { scale: 1, ease: "power1.inOut" })
       .to(".mask-wrapper", { maskSize, ease: "power1.inOut" }, "<")
       .to(".mask-wrapper", { opacity: 0 })
-      .to(".overlay-logo", { opacity: 1, onComplete: () => {
-        gsap.to(".overlay-logo", {opacity: 0})
-      } }, "<")
-      .to(".entrance-message", { duration: 1, ease: "power1.inOut", maskImage: 'radial-gradient(circle at 50% 0vh, black 50%, transparent 100%)' }, "<")
+      .to(".overlay-logo",{opacity: 1,
+        onComplete: () => {
+          gsap.to(".overlay-logo", { opacity: 0 })}},"<")
+      .to(
+        ".entrance-message",{ duration: 1, ease: "power1.inOut", maskImage: "radial-gradient(circle at 50% 0vh, black 50%, transparent 100%)",    
+        },"<");
   });
 
   return (
