@@ -42,7 +42,7 @@ const Final = () => {
     };
   }, []);
   return (
-    <section className="final">
+    <section className="final black-gradient-bg">
       <div className="final-content size-full">
         <video
           ref={videoRef}
