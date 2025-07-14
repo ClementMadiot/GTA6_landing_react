@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="" target="_blanck"><img src="./public" alt=""></a>
+  <a href="https://gta-vi-landing-cm.vercel.app/" target="_blanck"><img src="./public/images/GTA-VI-screen.png" alt="GTA-VI landing page"></a>
    <div align="center">
       <img src="https://camo.githubusercontent.com/36aa3f9d0250d285d322005ff1f4d216512f13c31e434a013c34dd864fa1c4b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d52656163742d626c75653f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d7768697465" alt="react" />
       <img src="https://camo.githubusercontent.com/807d5ee9099d29a72a272dde7a881f0bc4a9918095513f4d5209110958c62ef9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d475341502d3838434530323f7374796c653d666f722d7468652d6261646765266c6f676f3d677265656e736f636b266c6f676f436f6c6f723d7768697465" alt="GSAP" />
@@ -13,14 +13,15 @@
 
 - ✨ [Introduction](#introduction)
 - 🛠 [Technology Used](#tech-stack)
+- 📝 [Features](#features)
 - 🚀 [Launch App](#launch-app)
 - 🎨 [Styling](#style)
 
 ## <br /> <a name="introduction">✨ Introduction</a>
 
-**[ENG]**
+**[ENG]** GTA VI landing page is built with React, styled using TailwindCSS for a modern and responsive design. It features smooth GSAP animations powered by gsap-react, with scroll-based effects thanks to ScrollTrigger, and adapts seamlessly to all devices using react-responsive. A clean, interactive, and visually engaging experience across all screen sizes.
 
-**[FR]**
+**[FR]** GTA VI landing page est développée avec React et stylisée avec TailwindCSS pour un design moderne et responsive. Elle intègre des animations fluides avec GSAP via gsap-react, des effets dynamiques basés sur le scroll grâce à ScrollTrigger, et s’adapte parfaitement à tous les appareils avec react-responsive. Une expérience propre, interactive et visuellement engageante sur tous les écrans.
 
 ## <br /> <a name="tech-stack">🛠 Technology Used</a>
 
@@ -30,8 +31,24 @@
 - [GSAP](https://greensock.com/gsap/)
   GSAP (GreenSock Animation Platform) is a powerful JavaScript library for creating high-performance animations
 
+- [gsap-react](https://www.npmjs.com/package/gsap-react)
+  gsap-react is a React wrapper for the GSAP library, allowing you to easily integrate GSAP animations into your React components.
+
+- [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/)
+  ScrollTrigger enables anyone to create jaw-dropping scroll-based animations with minimal code. Infinitely flexible. Scrub, pin, snap, or just trigger anything scroll-related, even if it has nothing to do with animation.
+
 - [react-responsive](https://www.npmjs.com/package/react-responsive)
   react-responsive is a library that allows you to create responsive components in React applications, enabling you to render different components or styles based on the device's screen size or orientation.
+
+## <a name="features">📝 Features</a>
+
+👉 **Responsive Design**: The landing page is fully responsive, ensuring a seamless experience across various devices and screen sizes.
+
+👉 **Smooth Animations**: Utilizes GSAP for smooth and engaging animations, enhancing the overall user experience.
+
+👉 **Scroll-Based Effects**: Implements ScrollTrigger to create dynamic animations that respond to user scrolling, adding depth and interactivity.
+
+👉 **Modern Styling**: Built with TailwindCSS for a clean and modern design, making it visually appealing and easy to customize.
 
 ## <br /> <a name="launch-app">🚀 Launch App</a>
 
@@ -81,17 +98,17 @@ Global styling are defined using **CSS** & **TailwindCSS**
 
 @font-face {
   font-family: "Long";
-  src: url("/fonts/long.woff");
+  src: url("/fonts/long.woff")
 }
 
 @font-face {
   font-family: "Round";
-  src: url("/fonts/round.woff");
+  src: url("/fonts/round.woff")
 }
 
 @font-face {
   font-family: "Round Bold";
-  src: url("/fonts/round-bold.woff");
+  src: url("/fonts/round-bold.woff")
 }
 
 @theme {
@@ -100,9 +117,20 @@ Global styling are defined using **CSS** & **TailwindCSS**
   --font-round-bold: "Round Bold", sans-serif;
   --color-yellow: #fff9cb;
   --color-pink: #ffb0c4;
-  --breakpoint-sm: 40rem; /* 640px */
-  --breakpoint-xs: 20rem; /* 320px */
-  --breakpoint-3xl: 120rem; /* 1920px */
+  --color-black-gradient: linear-gradient(223.17deg,
+      rgb(28, 24, 41) 0%,
+      rgb(27, 24, 40) 8.61%,
+      rgb(25, 23, 36) 17.21%,
+      rgb(22, 21, 32) 25.82%,
+      rgb(20, 19, 28) 34.42%,
+      rgb(18, 18, 24) 43.03%,
+      rgb(17, 17, 23) 51.63%);
+  --breakpoint-sm: 40rem;
+  /* 640px */
+  --breakpoint-xs: 20rem;
+  /* 320px */
+  --breakpoint-3xl: 120rem;
+  /* 1920px */
 }
 
 body {
@@ -113,16 +141,16 @@ body {
 }
 
 main {
-  @apply black-gradient-bg;
+  background: var(--color-black-gradient)
 }
 
 @layer utilities {
   .flex-center {
-    @apply flex items-center justify-center;
+    @apply flex justify-center items-center;
   }
 
   .col-center {
-    @apply flex flex-col items-center justify-center;
+    @apply flex flex-col justify-center items-center;
   }
 
   .abs-center {
@@ -139,8 +167,8 @@ main {
     @apply fixed top-0 left-0 w-full flex justify-between items-center md:p-16 p-5 z-[100];
   }
 
-  gradient-title {
-    @apply text-[5rem] md:text-[8rem] font-round-bold font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 bg-clip-text text-transparent;
+  .gradient-title {
+    @apply bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-transparent;
   }
 
   .hero-section {
@@ -167,7 +195,7 @@ main {
     }
 
     .overlay-logo {
-      @apply size-full object-cover opacity-0 w-60 md:w-60 2xl:w-72 3xl:w-80;
+      @apply size-full object-cover opacity-0 w-[124px] md:w-[172px] lg:w-[229px] 2xl:w-72 3xl:w-80;
     }
   }
 
@@ -181,11 +209,11 @@ main {
     @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100;
 
     .entrance-logo {
-      @apply 2xl:w-72 3xl:w-80 md:w-60 w-48 absolute xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44 3xl:top-48 left-1/2 -translate-x-1/2;
+      @apply 2xl:w-72 3xl:w-80 lg:w-[229px] md:w-[172px] w-[124px] absolute xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44 3xl:top-48 left-1/2 -translate-x-1/2;
     }
 
     .text-wrapper {
-      @apply mt-40 md:mt-60 2xl:mt-44 3xl:top-48;
+      @apply mt-30 md:mt-40 2xl:mt-44 3xl:top-48;
     }
   }
 
@@ -201,7 +229,7 @@ main {
     }
 
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      @apply text-white lg:text-[26px] lg:leading-[34px] md:text-2xl text-lg md:pe-28 pe-14;
     }
 
     .jason-1 {
@@ -246,6 +274,7 @@ main {
 
     p {
       @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      /*! pe-14 */
     }
 
     p:last-of-type {
@@ -299,57 +328,47 @@ main {
         @apply rounded-full bg-white absolute left-1/2 -translate-x-1/2 md:bottom-16 -bottom-28 md:w-fit w-2/3 px-5 md:px-7 py-4 text-lg;
       }
     }
+  }
 
-    .final {
-      @apply relative h-dvh overflow-hidden;
+  .final {
+    @apply relative h-dvh overflow-hidden;
 
-      .final-content {
-        @apply scale-110;
-      }
+    .final-content {
+      @apply scale-110;
     }
+  }
 
-    .final-message {
-      @apply absolute w-full h-dvh overflow-hidden z-50 opacity-100;
-    }
+  .final-message {
+    @apply absolute w-full h-dvh overflow-hidden z-50 opacity-100;
   }
 }
 
-@layer utilities {
-  .black-gradient-bg {
-    background: linear-gradient(
-      223.17deg,
-      rgb(28, 24, 41) 0%,
-      rgb(27, 24, 40) 8.61%,
-      rgb(25, 23, 36) 17.21%,
-      rgb(22, 21, 32) 25.82%,
-      rgb(20, 19, 28) 34.42%,
-      rgb(18, 18, 24) 43.03%,
-      rgb(17, 17, 23) 51.63%
-    );
-  }
+.black-gradient-bg {
+  background: var(--color-black-gradient)
+}
 
-  .entrance-message {
-    mask-image: url("/images/big-hero-text.svg");
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-  }
+.entrance-message,
+.entrance-intro {
+  mask-image: radial-gradient(circle at 50% 100vh, black 0%, transparent 0%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
 
-  .mask-wrapper {
-    mask-image: url("/images/big-hero-text.svg");
-    mask-repeat: no-repeat;
-  }
+.mask-wrapper {
+  mask-image: url("/images/big-hero-text.svg");
+  mask-repeat: no-repeat;
+}
 
-  .animated-gradient-bg {
-    background: linear-gradient(135deg, #1e2a52 0%, #6e4b91 100%);
-  }
+.animated-gradient-bg {
+  background: linear-gradient(135deg, #1e2a52 0%, #6e4b91 100%);
+}
 
-  .jason-content {
-    background: radial-gradient(ellipse, #111117 20%, transparent 70%);
-  }
+.jason-content {
+  background: radial-gradient(ellipse, #111117 20%, transparent 70%);
+}
 
-  .lucia-life-content {
-    background: radial-gradient(ellipse, #111117 20%, transparent 70%);
-  }
+.lucia-life-content {
+  background: radial-gradient(ellipse, #111117 20%, transparent 70%);
 }
 ```
 </details>
