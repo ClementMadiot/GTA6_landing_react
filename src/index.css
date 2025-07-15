@@ -221,7 +221,7 @@ main {
       @apply xl:mx-56 md:mx-12 mx-5 xl:h-[85vh] md:h-[40vh] h-[30vh] w-full flex justify-center items-center overflow-hidden relative;
 
       video {
-        @apply w-full h-full 2xl:scale-x-105 object-cover;
+        @apply w-full h-full 2xl:scale-x-125 object-cover;
       }
 
       img {
