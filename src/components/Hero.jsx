@@ -14,7 +14,9 @@ const Hero = () => {
       maskSize: initialMaskSize,
     });
 
-    gsap.set(".mask-logo", { marginTop: "100vh", opacity: 0 });
+    gsap.set(".mask-logo", { marginTop: "-100vh", opacity: 0 });
+
+    gsap.set(".entrance-message", { marginTop: "0vh" });
 
     // timeline for the hero section
     const tl = gsap.timeline({
@@ -32,27 +34,44 @@ const Hero = () => {
       .to(".scale-out", { scale: 1, ease: "power1.inOut" })
       .to(".mask-wrapper", { maskSize, ease: "power1.inOut" }, "<")
       .to(".mask-wrapper", { opacity: 0 })
-      .to(".overlay-logo",{opacity: 1,
-        onComplete: () => {
-          gsap.to(".overlay-logo", { opacity: 0 })}},"<")
       .to(
-        ".entrance-message",{ duration: 1, ease: "power1.inOut", maskImage: "radial-gradient(circle at 50% 0vh, black 50%, transparent 100%)",    
-        },"<");
+        ".overlay-logo",
+        {
+          opacity: 1,
+          onComplete: () => {
+            gsap.to(".overlay-logo", { opacity: 0 });
+          },
+        },
+        "<"
+      )
+      .to(
+        ".entrance-message",
+        {
+          duration: 1,
+          ease: "power1.inOut",
+          maskImage:
+            "radial-gradient(circle at 50% 0vh, black 50%, transparent 100%)",
+        },
+        "<"
+      );
   });
 
   return (
     <section className="hero-section">
       <div className="size-full mask-wrapper">
+        {/* title scale out animation */}
         <img
           src="/images/hero-bg.webp"
           alt="background"
           className="scale-out"
-        />
+          />
+          {/* title head without o */}
         <img
           src="/images/hero-text.webp"
           alt="hero-logo"
           className="title-logo fade-out"
-        />
+          />
+          {/*VI watch trailer 2 */}
         <img
           src="/images/watch-trailer.png"
           alt="trailer"
